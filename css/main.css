@@ -124,7 +124,7 @@ p.lead {
   font-size: 2.4rem;
   line-height: 1.55;
   margin-bottom: 3.6rem;
-  color: #5a5a5a;
+  color: #7a7979;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -732,7 +732,7 @@ html.loaded .home-content__main {
 }
 
 .date {
-  color: #bebebe;
+  color: white;
   font-family: "Gentium Book Basic", sans-serif;
   font-size: 2.4rem;
   line-height: 1.55;
@@ -748,7 +748,7 @@ html.loaded .home-content__main {
 }
 
 .news-detail {
-  color: #555555;
+  color: #7a7979;
   font-family: "Gentium Book Basic", sans-serif;
   font-size: 2.4rem;
   line-height: 1.55;
