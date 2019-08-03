@@ -34,13 +34,14 @@ body {
 }
 
 a {
-  color: white;
+  color: #8f8f8f;
   transition: all 0.3s ease-in-out;
 }
 
 a:hover,
 a:active {
   outline: 0;
+  color: #8f8f8f;
 }
 
 h1,
@@ -755,6 +756,54 @@ html.loaded .home-content__main {
 }
 
 
+.education a {
+  position: relative;
+  font-weight: bold;
+}
+
+.education p {
+  margin-bottom: 1.4rem;
+}
+
+.education a::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0%;
+  width: 0;
+  height: 1px;
+  background-color: #ffffff;
+  transition: width 0.25s ease;
+}
+
+.education a:hover::after {
+  width: 100%;
+  transition: width 0.25s ease;
+}
+
+.institute {
+  color: #000000;
+  font-family: "Gentium Book Basic", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.55;
+  margin-bottom: 3.6rem;
+}
+
+.degree {
+  color: #252525;
+  font-family: "Gentium Book Basic", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.55;
+  margin-bottom: 3rem;
+}
+
+.year {
+  color: #8d8c8c;
+  font-family: "Gentium Book Basic", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 3.6rem;
+}
 @media only screen and (max-width: 1200px) {
   .s-services {
     padding-top: 15rem;
@@ -935,8 +984,8 @@ html.loaded .home-content__main {
   }
 }
 
-@media only screen and (max-width: 1300px) {
   .page-projects {
+@media only screen and (max-width: 1300px) {
     width: 990px;
   }
 }
@@ -976,13 +1025,13 @@ html.loaded .home-content__main {
 .s-contact {
   padding-top: 21rem;
   padding-bottom: 10.2rem;
-  background-color: #111111;
+  background-color: #ffffff;
   color: rgba(255, 255, 255, 0.3);
   position: relative;
 }
 
 .s-contact a {
-  color: #ffffff;
+  color: #000000;
   border-bottom: 1px solid transparent;
   display: inline-block;
 }
@@ -997,7 +1046,7 @@ html.loaded .home-content__main {
   font-family: "Gentium Book Basic", sans-serif;
   font-size: 4.4rem;
   line-height: 1.222;
-  color: #ffffff;
+  color: #000000;
   padding-top: 1.4rem;
   position: relative;
 }
@@ -1027,13 +1076,13 @@ html.loaded .home-content__main {
 }
 
 .contact-social li a {
-  color: rgba(255, 255, 255, 0.3);
+  color: #8f8f8f;
   border: none !important;
 }
 
 .contact-social li a:hover,
 .contact-social li a:focus {
-  color: #ffffff;
+  color: #000000;
 }
 
 .contact-social li:last-child {
@@ -1060,8 +1109,8 @@ html.loaded .home-content__main {
   width: 60px;
   line-height: 60px;
   text-align: center;
-  background: white;
-  color: black;
+  background: black;
+  color: white;
   text-align: center;
   text-transform: uppercase;
   border-radius: 50%;
