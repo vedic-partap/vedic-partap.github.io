@@ -19,7 +19,7 @@ body {
 
 body {
   background: #111111;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Gentium Book Basic", sans-serif;
   font-size: 1.7rem;
   font-style: normal;
   font-weight: normal;
@@ -119,11 +119,11 @@ h4,
 }
 
 p.lead {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Gentium Book Basic", sans-serif;
   font-size: 2.4rem;
   line-height: 1.55;
   margin-bottom: 3.6rem;
-  color: #555555;
+  color: #5a5a5a;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -156,7 +156,7 @@ b {
 
 em,
 i {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Gentium Book Basic", sans-serif;
 }
 
 ol {
@@ -235,7 +235,7 @@ form {
 }
 
 .display-1 {
-  font-family: "Domine", sans-serif;
+  font-family: "Gentium Book Basic", sans-serif;
   font-size: 4em;
   line-height: 1.35;
   letter-spacing: 0;
@@ -250,7 +250,7 @@ form {
 }
 
 .subhead {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Gentium Book Basic", sans-serif;
   font-size: 1.55rem;
   line-height: 1.25;
   text-transform: uppercase;
@@ -365,7 +365,7 @@ form {
 }
 
 .home-content h1 {
-  font-family: "Expletus Sans", sans-serif;
+  font-family: "Gentium Book Basic", sans-serif;
   font-size: 10rem;
   line-height: 0.75;
   margin-top: 0;
@@ -705,16 +705,16 @@ html.loaded .home-content__main {
   position: relative;
 }
 
-.job a {
+.news a {
   position: relative;
   font-weight: bold;
 }
 
-.job p {
+.news p {
   margin-bottom: 1.4rem;
 }
 
-.job a::after {
+.news a::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -725,14 +725,35 @@ html.loaded .home-content__main {
   transition: width 0.25s ease;
 }
 
-.job a:hover::after {
+.news a:hover::after {
   width: 100%;
   transition: width 0.25s ease;
 }
 
-.grey {
-  color: #555555;
+.date {
+  color: #bebebe;
+  font-family: "Gentium Book Basic", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.55;
+  margin-bottom: 3.6rem;
 }
+
+.heading {
+  color: #ffffff;
+  font-family: "Gentium Book Basic", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.55;
+  margin-bottom: 3.6rem;
+}
+
+.news-detail {
+  color: #555555;
+  font-family: "Gentium Book Basic", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.55;
+  margin-bottom: 3.6rem;
+}
+
 
 @media only screen and (max-width: 1200px) {
   .s-services {
@@ -833,7 +854,7 @@ html.loaded .home-content__main {
 
 .page-projects .project-item a .project-type {
   display: block;
-  font-family: "Titillium Web", serif;
+  font-family: "Gentium Book Basic", serif;
   font-size: 1.5rem;
   margin-bottom: 10px;
   transition: color 400ms cubic-bezier(0.7, 0, 0.3, 1) 0ms;
@@ -844,7 +865,7 @@ html.loaded .home-content__main {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1;
-  font-family: "Domine", sans-serif;
+  font-family: "Gentium Book Basic", sans-serif;
   margin: 0px;
   max-width: 80%;
   transition: color 400ms cubic-bezier(0.7, 0, 0.3, 1) 0ms;
@@ -854,7 +875,8 @@ html.loaded .home-content__main {
 
   .page-projects .project-item a .project-name,
   .page-projects .project-item a .project-intro {
-    font-size: 3rem;
+    font-size: 5rem;
+    font-weight: 500
   }
 }
 
@@ -972,7 +994,7 @@ html.loaded .home-content__main {
 
 .contact-email {
   display: inline-block;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Gentium Book Basic", sans-serif;
   font-size: 4.4rem;
   line-height: 1.222;
   color: #ffffff;
