@@ -17,10 +17,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(session({
-    secret: 'your-secret-key-change-this', // Change this!
+    secret: process.env.SESSION_SECRET || 'your-secret-key-change-this', // Change this!
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false, maxAge: 24 * 60 * 60 * 1000 } // 24 hours
+    cookie: { 
+        secure: process.env.NODE_ENV === 'production' && process.env.HTTPS === 'true', 
+        maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    }
 }));
 
 // Helper functions
@@ -158,8 +161,19 @@ app.delete('/api/bookmarks/:id', requireAuth, (req, res) => {
     }
 });
 
+// Error handling
+app.use((err, req, res, next) => {
+    console.error('Unhandled error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+});
+
 // Start server
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Bookmark Bunker running on port ${PORT}`);
+    console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
     console.log('Default password: "password" - Please change this!');
+    console.log('Server ready to accept connections');
+}).on('error', (err) => {
+    console.error('Failed to start server:', err);
+    process.exit(1);
 }); 
