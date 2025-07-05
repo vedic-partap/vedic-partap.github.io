@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Bunker - Personal Bookmark Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div id="login-form" class="login-container">
+            <h1>🔐 Bookmark Bunker</h1>
+            <p>Enter your password to access your bookmarks</p>
+            <form id="loginForm">
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="login-error" class="error-message"></div>
+        </div>
+
+        <!-- Main App -->
+        <div id="app" class="app-container" style="display: none;">
+            <header class="app-header">
+                <h1>📚 Bookmark Bunker</h1>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </header>
+
+            <!-- Add Bookmark Form -->
+            <div class="add-bookmark-section">
+                <h2>Add New Bookmark</h2>
+                <form id="addBookmarkForm">
+                    <div class="form-group">
+                        <input type="url" id="bookmarkUrl" placeholder="https://example.com" required>
+                        <input type="text" id="bookmarkTitle" placeholder="Bookmark title" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="bookmarkTags" placeholder="Tags (comma separated): tech, article, ai">
+                        <button type="submit">Add Bookmark</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="Search bookmarks...">
+                <select id="tagFilter">
+                    <option value="">All Tags</option>
+                </select>
+            </div>
+
+            <!-- Bookmarks List -->
+            <div class="bookmarks-section">
+                <h2>Your Bookmarks (<span id="bookmarkCount">0</span>)</h2>
+                <div id="bookmarksList" class="bookmarks-list">
+                    <!-- Bookmarks will be populated here -->
+                </div>
+            </div>
+
+            <!-- Edit Modal -->
+            <div id="editModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Edit Bookmark</h2>
+                    <form id="editBookmarkForm">
+                        <input type="hidden" id="editBookmarkId">
+                        <div class="form-group">
+                            <label>URL:</label>
+                            <input type="url" id="editBookmarkUrl" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Title:</label>
+                            <input type="text" id="editBookmarkTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tags:</label>
+                            <input type="text" id="editBookmarkTags" placeholder="comma separated">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit">Update Bookmark</button>
+                            <button type="button" id="cancelEdit">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
